@@ -13,7 +13,7 @@ clr=colors.rgb2hex(rgba) #convert the rgba to hex
 print(clr)
 '''
 
-def gen_color(see_map,n):
+def gen_color(see_map,n,reversed=False):
     '''Generates n distinct color from a given colormap%%!
     Returns: a list with hex values of colors
     '''
@@ -24,10 +24,13 @@ def gen_color(see_map,n):
         rgba=cmap(c) #select the rgba value of the cmap at point c which is a number between 0 to 1
         clr=colors.rgb2hex(rgba) #convert to hex
         colorlist.append(str(clr)) # create a list of these colors
+    
+    if reversed==True:
+        colorlist.reverse()
     return colorlist
 
 
-def gen_color_normalized(see_map,data_arr):
+def gen_color_normalized(see_map,data_arr,reversed=False):
     '''Generates n distinct color from a given colormap for a an array with data
     Returns: a list with hex values of colors
     '''
@@ -41,4 +44,7 @@ def gen_color_normalized(see_map,data_arr):
         rgba=cmap(norm) #select the rgba value of the cmap at point c which is a number between 0 to 1
         clr=colors.rgb2hex(rgba) #convert to hex
         colorlist_normalized.append(str(clr)) # create a list of these colors
+    
+    if reversed==True:
+        colorlist_normalized.reverse()
     return colorlist_normalized
