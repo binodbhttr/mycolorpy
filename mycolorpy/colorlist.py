@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt 
+import matplotlib.colors as colors
+import numpy as np
 '''
 Example Concept:
 cmap = plt.cm.get_cmap('bwr') #select a cmap
