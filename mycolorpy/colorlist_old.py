@@ -41,7 +41,7 @@ def gen_color(cmap,n,reverse=False):
     return colorlist
 
 
-def gen_color_normalized(cmap,data_arr,reverse=False,vmin=0,vmax=0):
+def gen_color_normalized(cmap,data_arr,reverse=False):
     '''Generates n distinct color from a given colormap for an array of desired data.
     Args:
         cmap(str): The name of the colormap you want to use.
@@ -55,32 +55,12 @@ def gen_color_normalized(cmap,data_arr,reverse=False,vmin=0,vmax=0):
 
         reverse(bool): False by default. Set it to True if you want the cmap result to be reversed.
 
-        vmin(float): 0 by default which sets vmin=minimum value in the data.
-            When vmin is assigned a non zero value it normalizes the color based on this minimum value
-
-
-        vmax(float): 0 by default which set vmax=maximum value in the data.
-            When vmax is assigned a non zero value it normalizes the color based on this maximum value
-
     Returns: 
         colorlist_normalized(list): A normalized list of colors with hex values for the given array.
     '''
-    
-    if (vmin==0) and (vmax==0):
-        data_min=np.min(data_arr)
-        data_max=np.max(data_arr)
-
-    else:
-        data_arr=np.append(data_arr,[vmin,vmax])
-        #data_arr=np.append(data_arr,vmax)
-        print(data_arr)
-        print(vmin,vmax)
-        data_min=np.min(data_arr)
-        data_max=np.max(data_arr)
-    
-    
     c_map = plt.cm.get_cmap(str(cmap)) # select the desired cmap
-    
+    data_min=np.min(data_arr)
+    data_max=np.max(data_arr)
     
     colorlist_normalized=list()
     for c in data_arr:
@@ -97,8 +77,5 @@ def gen_color_normalized(cmap,data_arr,reverse=False,vmin=0,vmax=0):
             rgba=c_map(1-norm) #select the rgba value of the cmap at point c which is a number between 0 to 1
             clr=colors.rgb2hex(rgba) #convert to hex
             colorlist_normalized.append(str(clr)) # create a list of these colors
-    if (vmin==0) and (vmax==0):
-        return colorlist_normalized
-    else:
-        colorlist_normalized=colorlist_normalized[:-2]
-        return colorlist_normalized
+    
+    return colorlist_normalized
