@@ -3,3 +3,4 @@ setup.cfg
 setup.py
 mycolorpy/__init__.py
 mycolorpy/colorlist.py
+mycolorpy/colorlist_old.py

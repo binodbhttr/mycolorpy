@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt 
 import matplotlib.colors as colors
 import numpy as np
+import warnings
 '''
 Example Concept:
 cmap = plt.cm.get_cmap('bwr') #select a cmap
@@ -71,10 +72,15 @@ def gen_color_normalized(cmap,data_arr,reverse=False,vmin=0,vmax=0):
         data_max=np.max(data_arr)
 
     else:
+        if vmin>np.min(data_arr):
+            warn_string="vmin you entered is greater than the minimum value in the data array "+str(np.min(data_arr))
+            warnings.warn(warn_string)
+
+        if(vmax<np.max(data_arr)):
+            warn_string="vmax you entered is smaller than the maximum value in the data array "+str(np.max(data_arr))
+            warnings.warn(warn_string)
+    
         data_arr=np.append(data_arr,[vmin,vmax])
-        #data_arr=np.append(data_arr,vmax)
-        print(data_arr)
-        print(vmin,vmax)
         data_min=np.min(data_arr)
         data_max=np.max(data_arr)
     
