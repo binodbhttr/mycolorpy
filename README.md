@@ -1,7 +1,13 @@
 # mycolorpy
+<img alt="Total downloads for the project" src="https://static.pepy.tech/badge/mycolorpy">
+<img alt="Last Month" src="https://static.pepy.tech/badge/mycolorpy/month">
+<img alt="Last Week" src="https://static.pepy.tech/badge/mycolorpy/week">
+
 
 
 Functions to create an array of colors based on a colormap
+
+
 
 Installation Instructions:
 
