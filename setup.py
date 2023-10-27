@@ -4,7 +4,7 @@ setup(
   packages = ['mycolorpy'],   # Chose the same as "name"
   version = '1.5.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'Create of array of colors from a colormap',   # Give a short description about your library
+  description = 'Create an array of colors from a given colormap',   # Give a short description about your library
   author = 'Binod Bhattarai',                   # Type in your name
   author_email = 'info@binodb.com.np',      # Type in your E-Mail
   url = 'https://github.com/binodbhttr/mycolorpy',   # Provide either the link to your github or to your website
