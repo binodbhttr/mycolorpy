@@ -42,7 +42,7 @@ def gen_color(cmap,n,reverse=False):
     return colorlist
 
 
-def gen_color_normalized(cmap,data_arr,reverse=False,vmin=0,vmax=0):
+def gen_color_normalized(cmap,data_arr,reverse=False,vmin=0,vmax=0, norm=False):
     '''Generates n distinct color from a given colormap for an array of desired data.
     Args:
         cmap(str): The name of the colormap you want to use.
@@ -62,6 +62,9 @@ def gen_color_normalized(cmap,data_arr,reverse=False,vmin=0,vmax=0):
 
         vmax(float): 0 by default which set vmax=maximum value in the data.
             When vmax is assigned a non zero value it normalizes the color based on this maximum value
+
+        norm(matplotlib.colors normalization): False by default which normalize color to the data.
+            can be change to another normalization, such as making the center value of diverging colormap to 1 using 'norm = matplotlib.colors.CenteredNorm(vcenter=1)'
 
     Returns: 
         colorlist_normalized(list): A normalized list of colors with hex values for the given array.
@@ -90,8 +93,11 @@ def gen_color_normalized(cmap,data_arr,reverse=False,vmin=0,vmax=0):
     
     colorlist_normalized=list()
     for c in data_arr:
-        norm=(c-data_min)/(data_max-data_min)*0.99
-        rgba=c_map(norm) #select the rgba value of the cmap at point c which is a number between 0 to 1
+        if not norm:
+            rgba=c_map(norm(c))    
+        else:
+            norm=(c-data_min)/(data_max-data_min)*0.99
+            rgba=c_map(norm) #select the rgba value of the cmap at point c which is a number between 0 to 1
         clr=colors.rgb2hex(rgba) #convert to hex
         colorlist_normalized.append(str(clr)) # create a list of these colors
     
