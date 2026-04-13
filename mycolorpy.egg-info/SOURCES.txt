@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+mycolorpy/__init__.py
+mycolorpy/colorlist.py
+mycolorpy/colorlist_old.py
+mycolorpy.egg-info/PKG-INFO
+mycolorpy.egg-info/SOURCES.txt
+mycolorpy.egg-info/dependency_links.txt
+mycolorpy.egg-info/requires.txt
+mycolorpy.egg-info/top_level.txt
