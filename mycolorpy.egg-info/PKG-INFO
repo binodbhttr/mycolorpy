@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: mycolorpy
-Version: 1.5.2
+Version: 1.5.3
 Summary: Create an array of colors from a given colormap
 Author-email: Binod Bhattarai <info@binodb.com.np>
 License-Expression: MIT
@@ -10,13 +10,18 @@ Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
 Classifier: Topic :: Software Development :: Build Tools
 Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
 Classifier: Programming Language :: Python :: 3.13
-Requires-Python: >=3.12
+Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
-Requires-Dist: numpy>=2.1.0
-Requires-Dist: matplotlib>=3.10.0
+Requires-Dist: numpy>=1.21
+Requires-Dist: matplotlib>=3.4.0
 Dynamic: license-file
 
 # mycolorpy
