@@ -6,9 +6,9 @@ build-backend = "setuptools.build_meta"
 name = "mycolorpy"
 version = "1.5.3"
 authors = [
-  { name="Binod Bhattarai", email="info@binodb.com.np" },
+  { name="Binod Bhattarai", email="bbhattarai@ucmerced.edu" },
 ]
-description = "Create an array of colors from a given colormap"
+description = "A scientific visualization toolkit for generating dynamic color arrays from any colormap"
 readme = "README.md"
 requires-python = ">=3.7"
 license = "MIT"

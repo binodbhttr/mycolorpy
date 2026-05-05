@@ -5,8 +5,7 @@
 
 
 
-Functions to create an array of colors based on a colormap
-
+A scientific visualization toolkit for generating dynamic color arrays from any colormap. Contains functions to create an array of colors based on a colormap.
 
 
 Installation Instructions:

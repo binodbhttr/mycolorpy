@@ -1,8 +1,8 @@
 Metadata-Version: 2.4
 Name: mycolorpy
 Version: 1.5.3
-Summary: Create an array of colors from a given colormap
-Author-email: Binod Bhattarai <info@binodb.com.np>
+Summary: A scientific visualization toolkit for generating dynamic color arrays from any colormap
+Author-email: Binod Bhattarai <bbhattarai@ucmerced.edu>
 License-Expression: MIT
 Project-URL: Homepage, https://github.com/binodbhttr/mycolorpy
 Keywords: Color,Hexcolor,Colormap
@@ -31,8 +31,7 @@ Dynamic: license-file
 
 
 
-Functions to create an array of colors based on a colormap
-
+A scientific visualization toolkit for generating dynamic color arrays from any colormap. Contains functions to create an array of colors based on a colormap.
 
 
 Installation Instructions:
